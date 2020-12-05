@@ -1,24 +1,27 @@
-# twitchchecker
+# Twitch Checker
 
-## Project setup
+Twitch Checker allows you to check which channels specific user follows
+
+### Install dependencies
+
 ```
 yarn install
+or
+npm install
 ```
 
-### Compiles and hot-reloads for development
+### Run development server
+
 ```
 yarn serve
+or
+npm run serve
 ```
 
-### Compiles and minifies for production
+### Build
+
 ```
 yarn build
+or
+npm run build
 ```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
