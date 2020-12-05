@@ -1,7 +1,9 @@
 {
   "name": "twitchchecker",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
+  "author": "kuba6121",
+  "description": "Twitch Checker allows you to check which channels specific user follows",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
