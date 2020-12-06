@@ -4,6 +4,7 @@
   "private": true,
   "author": "kuba6121",
   "description": "Twitch Checker allows you to check which channels specific user follows",
+  "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
