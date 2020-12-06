@@ -1,7 +1,9 @@
 <template>
     <main>
         <SearchUser :loading="loading" v-on:fetchFollows="fetchData" />
-        <Follows v-if="follows.length > 0" :follows="follows" />
+        <Follows v-if="follows != null && follows.length > 0 && error === null" :follows="follows" />
+        <h2 v-if="follows != null && !loading && follows.length === 0 && error === null" class="info">No follows</h2>
+        <h2 v-if="error != null" class="error">An error occurred. Try again later!</h2>
     </main>
 </template>
 
@@ -17,9 +19,10 @@ export default {
     },
     data() {
         return {
-            follows: [],
+            follows: null,
             loading: false,
-            page: 0
+            page: 0,
+            error: null
         }
     },
     methods: {
@@ -44,7 +47,7 @@ export default {
                 this.loading = false;
             } catch(err) {
                 this.loading = false;
-                console.log(err);
+                this.error = err;
             }
         }
     }
@@ -55,5 +58,19 @@ export default {
 main {
     min-height: calc(100vh - 50px);
     position: relative;
+    .info {
+        text-align: center;
+        color: #fffffe;
+        padding-top: 220px;
+        margin: 0;
+        font-size: 26px;
+    }
+    .error {
+        text-align: center;
+        color: #f25042;
+        padding-top: 220px;
+        margin: 0;
+        font-size: 26px;
+    }
 }
 </style>
