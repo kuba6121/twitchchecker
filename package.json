@@ -1,6 +1,6 @@
 {
   "name": "twitchchecker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "author": "kuba6121",
   "description": "Twitch Checker allows you to check which channels specific user follows",
